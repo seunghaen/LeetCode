@@ -8,10 +8,11 @@ class Solution:
         a = collections.deque()
         if not head:
             return True
-            
-        while head:
-            a.append(head.val)
-            head = head.next
+        
+        node = head
+        while node is not None:
+            a.append(node.val)
+            node = node.next
 
         while len(a)>=2:
             if a.popleft() != a.pop():
