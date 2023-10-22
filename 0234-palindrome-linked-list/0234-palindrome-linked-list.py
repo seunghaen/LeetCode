@@ -6,6 +6,9 @@
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         a = collections.deque()
+        if not head:
+            return True
+            
         while head:
             a.append(head.val)
             head = head.next
